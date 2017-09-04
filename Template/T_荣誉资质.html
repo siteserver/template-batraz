@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <div>
+      <!--header-->
+      <stl:include file="/include/header.html"></stl:include>  
+      <!--banner-->
+      <stl:include file="/include/banner.html"></stl:include>
+    </div>
+    <!--面包屑导航 start-->
+    <stl:include file="/include/mbx.html"></stl:include>
+    <!--面包屑导航 end-->
+    <div class="nycon">
+      <div class="container">
+        <div class="honor">
+          <ul class="clearfix">
+            <stl:contents totalNum="8">
+              <li class="pic">
+                <a href="javascript:;" rel="lightbox" class="cboxElement">
+                  <img class="vcenter" src="{Content.ImageUrl}" alt="" />
+                  <div class="zzc">
+                    <div class="zzctxt">
+                      <span>{Content.Title}</span>
+                      <div class="line"></div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </stl:contents>
+          </ul>
+        </div>
+        <!--移动端荣誉资质-->
+        <div class="phone-honor">
+          <ul>
+            <stl:contents totalNum="8">
+              <li class="pic"><img class="vcenter" src="{Content.ImageUrl}" alt="{Content.Title}" /></li>
+            </stl:contents>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--index news start-->
+    <stl:include file="/include/innews.html"></stl:include>
+    <!--index news end-->
+    <!--footer start-->
+    <stl:include file="/include/footer.html"></stl:include>
+    <!--footer end-->
+    <!--移动端  Mmenu-->
+    <stl:include file="/include/mobile_menu.html"></stl:include>  
+    <!--Include Js-->
+    <script src="{Stl.SiteUrl}/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!--移动端导航-->
+    <script src="{Stl.SiteUrl}/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="{Stl.SiteUrl}/js/public.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="{Stl.SiteUrl}/js/slick.min.js" ></script>
+    <!--placeholder-->
+    <script src="{Stl.SiteUrl}/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){
+      $(".phone-honor ul").slick({
+      dots:true,
+      autoplay:true,
+      arrows:false,
+      })
+      })
+    </script>
+    <!--placeholder-->
+    <script src="{Stl.SiteUrl}/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){ $('input, textarea').placeholder(); });
+    </script>
+  </body>
+</html>

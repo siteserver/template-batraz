@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <div>
+      <!--header-->
+      <stl:include file="/include/header.html"></stl:include>
+      <!--banner-->
+      <stl:include file="/include/banner.html"></stl:include>
+    </div>
+    <!--面包屑导航 start-->
+    <stl:include file="/include/mbx.html"></stl:include>
+    <!--面包屑导航 end-->
+    <div class="nycon">
+      <div class="container">
+        <div class="news_show">
+          <div class="nstit">
+            <h1>{Content.Title}</h1>
+            <div class="date">
+              <span>时间：<stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></span>
+              <span>来源：<stl:content type="Source"></stl:content></span>
+            </div>
+          </div>
+          <div class="nstxt">
+            <stl:content type="Content"></stl:content>
+          </div>
+          <div class="prevnext clearfix">
+            <div class="pnwrap pull-left">
+              <stl:navigation type="PreviousContent" tiptext="上一篇：" emptyText="无"></stl:navigation> 
+              <stl:navigation type="NextContent" tiptext="下一篇：" emptyText="无"></stl:navigation>
+            </div>
+            <a class="return pull-right" href="{Channel.NavigationUrl}">
+              返回列表
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--index news start-->
+    <stl:include file="/include/innews.html"></stl:include>
+    <!--index news end-->
+    <!--footer start-->
+    <stl:include file="/include/footer.html"></stl:include>
+    <!--footer end-->
+    
+    <!--移动端  Mmenu-->
+    <stl:include file="/include/mobile_menu.html"></stl:include>
+    <!--Include Js-->
+    <script src="{Stl.SiteUrl}/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!--移动端导航-->
+    <script src="{Stl.SiteUrl}/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="{Stl.SiteUrl}/js/public.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="{Stl.SiteUrl}/js/slick.min.js" ></script>
+    
+    <!--placeholder-->
+    <script src="{Stl.SiteUrl}/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){ $('input, textarea').placeholder(); });
+    </script>
+  </body>
+</html>
+

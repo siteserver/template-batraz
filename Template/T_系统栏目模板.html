@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <div>
+      <!--header-->
+      <stl:include file="/include/header.html"></stl:include>
+      <!--banner-->
+      <section class="banner">
+        <img src="{Channel.top1.ImageUrl}" />
+      </section>
+    </div>
+    <!--面包屑导航 start-->
+    <div class="mbx">
+      <div class="container">
+        <div class="nytit pull-left">{Channel.top1.Title}</div>
+        <menu class="menu pull-left" id="menu">
+          <stl:channels topLevel="1">
+            <stl:if testType="UpChannelOrSelf">
+              <stl:yes>
+                <div><stl:a class="cur"></stl:a></div>
+              </stl:yes>
+              <stl:no>
+                <div><stl:a></stl:a></div>
+              </stl:no>
+            </stl:if>
+          </stl:channels>
+        </menu>
+        <div class="mbxwrap pull-right">
+          <stl:location><span>/</span></stl:location>
+        </div>
+      </div>
+    </div>
+    <!--面包屑导航 end-->
+    <div class="nycon">
+      <div class="container">
+        <div class="news">
+          <ul>
+            <stl:pageContents pageNum="5" order="AddDate">
+              <li>
+                <div class="pic pull-left"><stl:a><img class="vcenter" src="{Content.ImageUrl}" alt="{Content.ImageUrl}" /></stl:a></div>
+                <div class="ntxt pull-left">
+                  <stl:a><stl:content type="Title"></stl:content></stl:a>
+                  <stl:content type="Summary"></stl:content>
+                </div>
+                <div class="date pull-right">
+                  <span><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></span>
+                  <a href="{Content.NavigationUrl}" target="_blank"></a>
+                </div>
+              </li>
+            </stl:pageContents>
+          </ul>
+          <div class="page">
+            <stl:pageItem type="FirstPage">
+              <stl:yes>
+                <a href="{Current.Url}">首页</a>
+              </stl:yes>
+              <stl:no>
+                <a href="javascript:;">首页</a>
+              </stl:no>
+            </stl:pageItem>
+            <stl:pageItem type="PreviousPage">
+              <stl:yes>
+                <a href="{Current.Url}">上一页</a>
+              </stl:yes>
+              <stl:no>
+                <a href="javascript:;">上一页</a>
+              </stl:no>
+            </stl:pageItem>
+            <stl:pageItem type="PageNavigation" listNum="5">
+              <stl:yes>
+                <a href="{Current.Url}">{Current.Num}</a>
+              </stl:yes>
+              <stl:no>
+                <a class="active" href="javascript:;">{Current.Num}</a>
+              </stl:no>
+            </stl:pageItem>
+            <stl:pageItem type="NextPage">
+              <stl:yes>
+                <a href="{Current.Url}">下一页</a>
+              </stl:yes>
+              <stl:no>
+                <a href="javascript:;">下一页</a>
+              </stl:no>
+            </stl:pageItem>
+            <stl:pageItem type="LastPage">
+              <stl:yes>
+                <a href="{Current.Url}">尾页</a>
+              </stl:yes>
+              <stl:no>
+                <a href="javascript:;">尾页</a>
+              </stl:no>
+            </stl:pageItem>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--index news start-->
+    <stl:include file="/include/innews.html"></stl:include>
+    <!--index news end-->
+    <!--footer start-->
+    <stl:include file="/include/footer.html"></stl:include>
+    <!--footer end-->
+    <!--移动端  Mmenu-->
+    <stl:include file="/include/mobile_menu.html"></stl:include>  
+    
+    <!--Include Js-->
+    <script src="{Stl.SiteUrl}/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!--移动端导航-->
+    <script src="{Stl.SiteUrl}/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="{Stl.SiteUrl}/js/public.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="{Stl.SiteUrl}/js/slick.min.js" ></script>
+    
+    <!--placeholder-->
+    <script src="{Stl.SiteUrl}/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){ $('input, textarea').placeholder(); });
+    </script>
+  </body>
+</html>

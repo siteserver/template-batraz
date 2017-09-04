@@ -1,0 +1,38 @@
+<header class="header">
+        <section class="container">
+          <a href="#mmenu" class="phone-nav glyphicon ion-navicon-round"></a>
+        </section>    
+        <div class="top">
+          <div class="container clearfix">
+            <div class="logo pull-left" style="margin-top:4%;">
+              <a href="{stl.siteurl}/index.html">{stl:value type=Logo}</a>
+            </div>
+            <div class="navwrap pull-right">
+              <div class="lwt-wrap">
+                <a href="#"><img src="{stl.siteurl}/images/yuyan.png" alt="" /></a>
+                <span>
+                  <img src="{stl.siteurl}/images/weixin.png" alt="" />
+                  <div class="erweima">
+                    {stl:value type=weichat}
+                  </div>
+                </span>
+                <a class="toptel" href="#"><img src="{stl.siteurl}/images/tel.png" alt="" />400-123-4321</a>
+              </div>
+              <ul class="nav">
+                <li class="active"><a href="{stl.siteurl}/index.html">首页</a></li>
+                <stl:channels topLevel="0" groupChannel="nav">
+                    <li><stl:a></stl:a>
+                    <stl:if type="CountOfChannels"  operate="GreatThan" value="0">
+                      <ul class="two">
+                      <stl:channels>
+                        <li><stl:a></stl:a></li>
+                      </stl:channels>
+                      </ul>
+                    </stl:if>
+                    </li>
+                </stl:channels>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>

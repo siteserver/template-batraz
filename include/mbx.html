@@ -1,0 +1,20 @@
+<div class="mbx">
+      <div class="container">
+        <div class="nytit pull-left">{Channel.top1.Title}</div>
+        <menu class="menu pull-left" id="menu">
+          <stl:channels topLevel="1">
+            <stl:if testType="UpChannelOrSelf">
+              <stl:yes>
+                <div><stl:a class="cur"></stl:a></div>
+              </stl:yes>
+              <stl:no>
+                <div><stl:a></stl:a></div>
+              </stl:no>
+            </stl:if>
+          </stl:channels>
+        </menu>
+        <div class="mbxwrap pull-right">
+          <stl:location><span>/</span></stl:location>
+        </div>
+      </div>
+    </div>

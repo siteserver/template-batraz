@@ -1,0 +1,26 @@
+<div class="footer">
+      <div class="container">
+        <div class="fleft pull-left">
+          <ul class="fnav clearfix">
+            <li><a href="{Stl.SiteUrl}/index.html">首页</a></li>
+            <stl:channels topLevel="0" groupChannel="nav">
+            <li><stl:a target="_blank"></stl:a></li>
+            </stl:channels>
+<p>Copyright © 2017</p>
+          </ul>
+        </div>
+        <div class="fright pull-right">
+          <div class="friendlink pull-left">
+            <span>友情链接</span>
+            <div class="flinkdown">
+            <stl:contents channelIndex="友情链接">
+              <stl:a target="_blank"></stl:a>
+            </stl:contents>
+            </div>
+          </div>
+          <div class="erweima pull-right">
+            {stl:value type=weichat}
+          </div>
+        </div>
+      </div>
+    </div>

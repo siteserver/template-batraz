@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <div> 
+      <!--header--> 
+      <stl:include file="/include/header.html"></stl:include> 
+      <!--banner--> 
+      <stl:include file="/include/banner.html"></stl:include> </div>
+    <!--面包屑导航 start--> 
+    <stl:include file="/include/mbx.html"></stl:include> 
+    <!--面包屑导航 end-->
+    <div class="nycon">
+      <div class="container">
+        <div class="pro">
+          <div class="twofenlei">
+            <stl:channels topLevel="2">
+              <stl:if type="UpChannelOrSelf">
+                <stl:yes> <stl:a class="active"></stl:a> </stl:yes>
+                <stl:no> <stl:a></stl:a> </stl:no>
+              </stl:if>
+            </stl:channels>
+          </div>
+          <ul class="case clearfix">
+            <stl:pageContents pageNum="8" order="AddDate">
+              <li class="pic animated fadeInleft"> <stl:a target="_blank"><img class="vcenter" src="{Content.ImageUrl}" alt="{Content.Title}" />
+                <div class="zzc">
+                  <div class="zzcwrap"> <span>
+                    {Content.Title}
+                    </span>
+                    <div class="line"></div>
+                  </div>
+                </div>
+                </stl:a> </li>
+            </stl:pageContents>
+          </ul>
+          <div class="page"> <stl:pageItem type="FirstPage">
+            <stl:yes> <a href="{Current.Url}">首页</a> </stl:yes>
+            <stl:no> <a href="javascript:;">首页</a> </stl:no>
+            </stl:pageItem> <stl:pageItem type="PreviousPage">
+            <stl:yes> <a href="{Current.Url}">上一页</a> </stl:yes>
+            <stl:no> <a href="javascript:;">上一页</a> </stl:no>
+            </stl:pageItem> <stl:pageItem type="PageNavigation" listNum="5">
+            <stl:yes> <a href="{Current.Url}">{Current.Num}</a> </stl:yes>
+            <stl:no> <a class="active" href="javascript:;">{Current.Num}</a> </stl:no>
+            </stl:pageItem> <stl:pageItem type="NextPage">
+            <stl:yes> <a href="{Current.Url}">下一页</a> </stl:yes>
+            <stl:no> <a href="javascript:;">下一页</a> </stl:no>
+            </stl:pageItem> <stl:pageItem type="LastPage">
+            <stl:yes> <a href="{Current.Url}">尾页</a> </stl:yes>
+            <stl:no> <a href="javascript:;">尾页</a> </stl:no>
+            </stl:pageItem> </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--index news start--> 
+    <stl:include file="/include/innews.html"></stl:include> 
+    <!--index news end--> 
+    
+    <!--footer start--> 
+    <stl:include file="/include/footer.html"></stl:include> 
+    
+    <!--footer end--> 
+    
+    <!--移动端  Mmenu--> 
+    <stl:include file="/include/mobile_menu.html"></stl:include> 
+    <script src="{Stl.SiteUrl}/js/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+    
+    <!--移动端导航--> 
+    <script src="{Stl.SiteUrl}/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="{Stl.SiteUrl}/js/public.js" type="text/javascript" charset="utf-8"></script> 
+    <script type="text/javascript" src="{Stl.SiteUrl}/js/slick.min.js" ></script> 
+    <!--placeholder--> 
+    <script src="{Stl.SiteUrl}/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script type="text/javascript">
+      $(function(){ $('input, textarea').placeholder(); });
+    </script>
+  </body>
+</html>

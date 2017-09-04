@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <div>
+      <!--header-->
+      <stl:include file="/include/header.html"></stl:include>
+      <!--banner-->
+      <section class="banner">
+        <stl:contents channelIndex="Banner" totalNum="5">
+          <div><stl:a target="_blank"><img src="{Content.ImageUrl}"/></stl:a></div>
+        </stl:contents>
+      </section>
+    </div> 
+    <!--业务范围 start-->
+    <div class="scope">
+      <div class="container">
+        <div class="tit">
+          <span class="titspan1">ENTERPRISE INFORMATION</span>
+          <span class="titspan2"><img src="{stl.siteurl}/images/titline.jpg" alt="" /><em>企业资讯</em><img src="{stl.siteurl}/images/titline.jpg" alt="" /></span>
+        </div>
+        <ul class="clearfix">
+          <stl:contents channelIndex="企业资讯" totalNum="4" order="AddDate">
+            <li>
+              <div class="pic"><stl:a target="_blank"><img class="vcenter" src="{stl:content type=ImageUrl no=2}" alt="{Content.Title}" /></stl:a></div>
+              <stl:a target="_blank" class="scopea">{Content.Title}</stl:a>
+              <p>{Content.Summary}</p>
+            </li>
+          </stl:contents>
+        </ul>
+      </div>
+    </div>
+    <!--业务范围 end-->
+    
+    <!--index about start-->
+    <div class="inabout">
+      <div class="container">
+        <div class="tit">
+          <span class="titspan1" data-scroll-reveal="enter top">ABOUT US</span>
+          <span class="titspan2" data-scroll-reveal="enter bottom after 0.5s"><img src="{stl.siteurl}/images/titline2.jpg" alt="" /><em>关于我们</em><img src="{stl.siteurl}/images/titline2.jpg" alt="" /></span>
+        </div>
+        <div class="inabtxt" data-scroll-reveal="enter bottom over 1s and move 100px">
+          <stl:contents channelIndex="公司简介" totalNum="1">
+            <stl:content type="Summary"></stl:content>
+          </stl:contents>
+        </div>
+        <a data-scroll-reveal="enter bottom over 1s and move 300px after 0.3s" href="{Channel.NavigationUrl_公司简介}" target="_blank" class="more">查看更多</a>
+      </div>
+    </div>
+    <!--index about end-->
+    
+    <!--index case start-->
+    <div class="incase">
+      <div class="container">
+        <div class="tit">
+          <span class="titspan1" data-scroll-reveal="enter top">CUSTOMER CASES</span>
+          <span class="titspan2" data-scroll-reveal="enter bottom after 0.5s"><img src="{stl.siteurl}/images/titline.jpg" alt="" /><em>客户案例</em><img src="{stl.siteurl}/images/titline.jpg" alt="" /></span>
+        </div>
+        <div class="incasecon">
+          <div class="incasefl">
+            <stl:channels channelIndex="客户案例">
+              <div><a data-scroll-reveal="enter top after 0.5s" href="javascript:;">{Channel.Title}</a></div>
+            </stl:channels>
+          </div>
+          
+        </div>
+      </div>
+      <div class="incasewrap" data-scroll-reveal="enter bottom over 1s and move 100px">
+        <div><div class="demo">
+          <div class="demo1">
+            <stl:contents channelIndex="政府网站" totalNum="9">
+              <div>
+                <stl:a target="_blank">
+                  <div class="pic">
+                    <img class="vcenter" src="{Content.ImageUrl}" border="0" />
+                  </div>
+                  <div class="zzc">
+                    <div class="casename">
+                      <span>{Content.Title}</span>
+                      <div class="line"></div>
+                    </div>
+                  </div>
+                </stl:a></div>
+            </stl:contents>
+          </div>
+          </div>
+        </div>
+        <div><div class="demo">
+          <div class="demo1">
+            <stl:contents channelIndex="企业网站" totalNum="9">
+              <div><stl:a target="_blank">
+                <div class="pic">
+                  <img class="vcenter" src="{Content.ImageUrl}" border="0" />
+                </div>
+                <div class="zzc">
+                  <div class="casename">
+                    <span>{Channel.Title}</span>
+                    <div class="line"></div>
+                  </div>
+                </div>
+                </stl:a></div>
+            </stl:contents>
+          </div>
+          </div>
+        </div>
+        <div><div class="demo">
+          <div class="demo1">
+            <stl:contents channelIndex="微信服务" totalNum="9">
+              <div><stl:a target="_blank">
+                <div class="pic">
+                  <img class="vcenter" src="{Content.ImageUrl}" border="0" />
+                </div>
+                <div class="zzc">
+                  <div class="casename">
+                    <span>{Channel.Title}</span>
+                    <div class="line"></div>
+                  </div>
+                </div>
+                </stl:a></div>
+            </stl:contents>
+          </div>
+          </div>
+        </div>
+        <div><div class="demo">
+          <div class="demo1">
+            <stl:contents channelIndex="微信平台" totalNum="9">
+              <div><stl:a target="_blank">
+                <div class="pic">
+                  <img class="vcenter" src="{Content.ImageUrl}" border="0" />
+                </div>
+                <div class="zzc">
+                  <div class="casename">
+                    <span>{Channel.Title}</span>
+                    <div class="line"></div>
+                  </div>
+                </div>
+                </stl:a></div>
+            </stl:contents>
+          </div>
+          </div>
+        </div>
+      </div>
+      <a data-scroll-reveal="enter bottom after 0.5s" href="{Channel.NavigationUrl_政府网站}" target="_blank" class="more">查看更多</a>
+    </div>
+    <!--index case end-->
+    
+    <!--index news start-->
+    <stl:include file="/include/innews.html"></stl:include>
+    <!--index news end-->
+    
+    
+    <!--footer start-->
+    <stl:include file="/include/footer.html"></stl:include>
+    <!--footer end-->
+    
+    <!--移动端  Mmenu-->
+    <stl:include file="/include/mobile_menu.html"></stl:include> 
+    <!--Include Js-->
+    <script src="{Stl.SiteUrl}/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!--移动端导航-->
+    <script src="{Stl.SiteUrl}/js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="{Stl.SiteUrl}/js/public.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!--slick-->
+    <script src="{Stl.SiteUrl}/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){
+      $('.banner').slick({
+      dots: true,
+      autoplay:true,
+      arrows:false,
+      autoplaySpeed:3000,
+      });
+      
+      $(".demo1").slick({
+      dots:false,
+      arrows:false,
+      autoplay:true,
+      slidesToShow:7,
+      slidesToScroll:6,
+      responsive: [
+      {
+      breakpoint: 1200,
+      settings: {
+      slidesToShow: 5,
+      slidesToScroll: 5
+      }
+      },
+      {
+      breakpoint: 480,
+      settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3
+      }
+      }
+      
+      ]
+      })
+      
+      $(".incasewrap").slick({
+      fade: true,
+      useTransform: true,
+      arrows: false,
+      draggable:false,
+      asNavFor:".incasefl"
+      })
+      $(".incasefl").slick({
+      focusOnSelect: true,
+      slidesToShow: 7,
+      useTransform: true,
+      arrows: false,
+      asNavFor:".incasewrap",
+      responsive: [
+      {
+      breakpoint: 768,
+      settings: {
+      slidesToShow: 3,
+      }
+      },
+      {
+      breakpoint: 480,
+      settings: {
+      slidesToShow: 3,
+      }
+      }
+      
+      ]
+      });
+      });
+    </script>
+    
+    <!--placeholder-->
+    <script src="{Stl.SiteUrl}/js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){ $('input, textarea').placeholder(); });
+    </script>
+    <script type="text/javascript" src="{Stl.SiteUrl}/js/scrollReveal.js"></script>
+    <script>
+      if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+      (function(){
+      window.scrollReveal = new scrollReveal({reset: true});
+      })();
+      };
+    </script>
+  </body>
+</html>
+
