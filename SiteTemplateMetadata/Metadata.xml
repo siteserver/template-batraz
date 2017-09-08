@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SiteTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SiteTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SiteTemplateName>Batraz</SiteTemplateName>
-  <PublishmentSystemType>WCM</PublishmentSystemType>
+  <PublishmentSystemType>CMS</PublishmentSystemType>
   <WebSiteUrl />
   <PicFileName>T_Batraz.png</PicFileName>
   <Description />
